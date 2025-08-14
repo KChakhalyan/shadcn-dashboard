@@ -116,7 +116,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.logo-betron::first-letter {
+  color: #0497d9;
+  font-size: x-large;
+  font-weight: bolder;
 }

@@ -2,15 +2,15 @@ import Link from "next/link"
 import { BadgeCheck, CreditCard, LogOut, Moon, Settings, SquareMenu, User, Users } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu"
-import { Button } from "./ui/button"
 import { ModeToggle } from "./ModeToggle"
+import { SidebarTrigger } from "./ui/sidebar"
 
 
 const Navbar = () => {
     return (
         <nav className="flex p-4 items-center justify-between">
             {/* LEFT */}
-            colapseButton
+            <SidebarTrigger />
             {/* RIGHT */}
             <div className="flex items-center gap-4">
                 <Link href="/">Dashboard</Link>
