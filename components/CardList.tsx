@@ -96,7 +96,8 @@ const CardList = ({ title }: { title: string }) => {
                 {list.map(item => (
                     <Card key={item.id} className="flex-row items-center justify-between gap-4 p-4">
                         <div className="w-12 h-12 bordered-sm relative overflow-hidden">
-                            <Image src={item.image} alt={item.title} fill className="object-cover" />
+                            <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
                         </div>
                         <CardContent className="p-0 flex-1">
                             <CardTitle className="text-sm font-medium">

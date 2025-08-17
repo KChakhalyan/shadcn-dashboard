@@ -2,6 +2,7 @@ import CardList from "@/components/CardList";
 import Barchart from "@/components/charts/Barchart";
 import ChartAreaLegend from "@/components/charts/ChartAreaLegend";
 import PieChartDonut from "@/components/charts/PieChartDonut";
+import TodoList from "@/components/TodoList";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <div className="bg-primary-foreground p-4 rounded-lg lg:col-span-2 xl:col-span-1 2xl:col-span-2"><Barchart /></div>
       <div className="bg-primary-foreground p-4 rounded-lg "><CardList title="Latest Transactions" /></div>
       <div className="bg-primary-foreground p-4 rounded-lg "><PieChartDonut /></div>
-      <div className="bg-primary-foreground p-4 rounded-lg ">Test</div>
+      <div className="bg-primary-foreground p-4 rounded-lg "><TodoList /></div>
       <div className="bg-primary-foreground p-4 rounded-lg lg:col-span-2 xl:col-span-1 2xl:col-span-2"><ChartAreaLegend /></div>
       <div className="bg-primary-foreground p-4 rounded-lg "><CardList title="Popular Content" /></div>
     </div>
