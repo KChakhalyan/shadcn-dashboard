@@ -59,9 +59,10 @@ const chartConfig = {
 
 
 const PieChartDonut = () => {
-    const totalVisitors = React.useMemo(() => {
-        return chartData.reduce((acc, curr) => acc + curr.visitors, 0)
-    }, [])
+
+    const totalVisitors = chartData.reduce((acc, curr) => acc + curr.visitors, 0)
+
+
     return (
         <Card className="flex flex-col border-none py-2">
             <CardHeader className="items-center pb-0">
@@ -120,7 +121,7 @@ const PieChartDonut = () => {
             </CardContent>
             <CardFooter className="flex-col gap-2 text-sm">
                 <div className="flex items-center gap-2 leading-none font-medium">
-                    Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+                    Trending up by 5.2% this month <TrendingUp className="h-4 w-4 text-green-500" />
                 </div>
                 <div className="text-muted-foreground leading-none">
                     Showing total visitors for the last 6 months
