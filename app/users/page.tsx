@@ -1,4 +1,4 @@
 const UsersPage = () => {
-  return <div className=""></div>;
+  return <div className="">users page</div>;
 };
 export default UsersPage;

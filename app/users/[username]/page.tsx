@@ -30,6 +30,8 @@ import {
 import { Sheet, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import EditUser from "@/components/EditUser";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ChartLineMultiple } from "@/components/ChartLineMultiple";
 
 const SingleUserPage = () => {
   return (
@@ -195,9 +197,25 @@ const SingleUserPage = () => {
         {/* RIGHT */}
         <div className="w-full xl:w=2/3 space-y-6">
           {/* USER CARD CONTAINER */}
-          <div className="bg-primary-foreground p-4 rounded-md">USER CARD</div>
+          <div className="bg-primary-foreground p-4 rounded-md">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src="https://avatars.githubusercontent.com/u/10487372?v=4" />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+              <h1 className="text-xl font-semibold">John Doe</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab
+              temporibus quidem, a recusandae neque impedit adipisci officiis
+              accusantium, saepe ipsam optio! Fugiat modi, voluptas dolorum
+              similique fugit tempore qui laudantium!
+            </p>
+          </div>
           {/* CHART CONTAINER */}
-          <div className="bg-primary-foreground p-4 rounded-md">CHART</div>
+          <div className="bg-primary-foreground p-4 rounded-md">
+            <ChartLineMultiple />
+          </div>
         </div>
       </div>
     </div>

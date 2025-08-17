@@ -23,6 +23,14 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 const formSchema = z.object({
   username: z
     .string()
@@ -54,9 +62,9 @@ const EditUser = () => {
     <SheetContent>
       <SheetHeader>
         <SheetTitle className="mb-4">Edit User</SheetTitle>
-        <SheetDescription>
+        <SheetDescription asChild>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <form className="space-y-8">
               <FormField
                 control={form.control}
                 name="username"
@@ -64,10 +72,10 @@ const EditUser = () => {
                   <FormItem>
                     <FormLabel>Username</FormLabel>
                     <FormControl>
-                      <Input placeholder="Username" {...field} />
+                      <Input {...field} />
                     </FormControl>
                     <FormDescription>
-                      This is your public display name.
+                      This is your public username.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -80,10 +88,10 @@ const EditUser = () => {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="email@mail.com" {...field} />
+                      <Input {...field} />
                     </FormControl>
                     <FormDescription>
-                      This is your public display email.
+                      Only admin can see your email.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -96,10 +104,10 @@ const EditUser = () => {
                   <FormItem>
                     <FormLabel>Phone</FormLabel>
                     <FormControl>
-                      <Input placeholder="+1 234 5678" {...field} />
+                      <Input {...field} />
                     </FormControl>
                     <FormDescription>
-                      This is your public display phone.
+                      Only admin can see your phone number.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -112,10 +120,10 @@ const EditUser = () => {
                   <FormItem>
                     <FormLabel>Location</FormLabel>
                     <FormControl>
-                      <Input placeholder="New York, NY" {...field} />
+                      <Input {...field} />
                     </FormControl>
                     <FormDescription>
-                      This is your public display location.
+                      This is the public location.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -128,10 +136,18 @@ const EditUser = () => {
                   <FormItem>
                     <FormLabel>Role</FormLabel>
                     <FormControl>
-                      <Input placeholder="Admin | User" {...field} />
+                      <Select>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Role" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="admin">Admin</SelectItem>
+                          <SelectItem value="user">User</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </FormControl>
                     <FormDescription>
-                      This is your public display role.
+                      Only verified users can be admin.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
