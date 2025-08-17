@@ -161,7 +161,7 @@ const SingleUserPage = () => {
               <div className="flex items-center gap-2">
                 <Mail />
                 <span className="font-bold">Email: </span>
-                <span> john.doe@mailcom </span>
+                <span> john.doe@mail.com </span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone />
