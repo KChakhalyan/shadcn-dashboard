@@ -51,103 +51,98 @@ const EditUser = () => {
     console.log(values);
   }
   return (
-    <div>
-      <SheetContent>
-        <SheetHeader>
-          <SheetTitle className="mb-4">Edit User</SheetTitle>
-          <SheetDescription>
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-8"
-              >
-                <FormField
-                  control={form.control}
-                  name="username"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Username</FormLabel>
-                      <FormControl>
-                        <Input placeholder="shadcn" {...field} />
-                      </FormControl>
-                      <FormDescription>
-                        This is your public display name.
-                      </FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input placeholder="email@mail.com" {...field} />
-                      </FormControl>
-                      <FormDescription>
-                        This is your public display email.
-                      </FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Phone</FormLabel>
-                      <FormControl>
-                        <Input placeholder="+1 234 5678" {...field} />
-                      </FormControl>
-                      <FormDescription>
-                        This is your public display phone.
-                      </FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="location"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Location</FormLabel>
-                      <FormControl>
-                        <Input placeholder="New York, NY" {...field} />
-                      </FormControl>
-                      <FormDescription>
-                        This is your public display location.
-                      </FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="role"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Role</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Admin | User" {...field} />
-                      </FormControl>
-                      <FormDescription>
-                        This is your public display role.
-                      </FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button type="submit">Submit</Button>
-              </form>
-            </Form>
-          </SheetDescription>
-        </SheetHeader>
-      </SheetContent>
-    </div>
+    <SheetContent>
+      <SheetHeader>
+        <SheetTitle className="mb-4">Edit User</SheetTitle>
+        <SheetDescription>
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+              <FormField
+                control={form.control}
+                name="username"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Username</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Username" {...field} />
+                    </FormControl>
+                    <FormDescription>
+                      This is your public display name.
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input placeholder="email@mail.com" {...field} />
+                    </FormControl>
+                    <FormDescription>
+                      This is your public display email.
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Phone</FormLabel>
+                    <FormControl>
+                      <Input placeholder="+1 234 5678" {...field} />
+                    </FormControl>
+                    <FormDescription>
+                      This is your public display phone.
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="location"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Location</FormLabel>
+                    <FormControl>
+                      <Input placeholder="New York, NY" {...field} />
+                    </FormControl>
+                    <FormDescription>
+                      This is your public display location.
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="role"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Role</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Admin | User" {...field} />
+                    </FormControl>
+                    <FormDescription>
+                      This is your public display role.
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <Button type="submit">Submit</Button>
+            </form>
+          </Form>
+        </SheetDescription>
+      </SheetHeader>
+    </SheetContent>
   );
 };
 export default EditUser;

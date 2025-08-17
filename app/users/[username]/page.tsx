@@ -135,7 +135,7 @@ const SingleUserPage = () => {
           </div>
           {/* INFORMATION CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-md">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-2">
               <h1 className="text-xl font-semibold">User Information</h1>
               <Sheet>
                 <SheetTrigger asChild>
