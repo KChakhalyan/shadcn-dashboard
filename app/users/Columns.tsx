@@ -12,6 +12,7 @@ import {
 import { ColumnDef } from "@tanstack/react-table";
 import { MoreHorizontal } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
+import { cn } from "@/lib/utils";
 
 export type User = {
   id: string;
@@ -142,6 +143,22 @@ export const columns: ColumnDef<User>[] = [
           Status
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
+      );
+    },
+    cell: ({ row }) => {
+      const status = row.getValue("userStatus");
+      return (
+        <div
+          className={cn(
+            `p-1 rounded-sm w-max text-sm`,
+            status === "Active" && "bg-emerald-500 text-white",
+            status === "Pending" && "bg-amber-400 text-black",
+            status === "Finished" && "bg-sky-500 text-white",
+            status === "Banned" && "bg-rose-500 text-white"
+          )}
+        >
+          {status as string}
+        </div>
       );
     },
   },
