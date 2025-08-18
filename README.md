@@ -32,9 +32,10 @@ The project demonstrates reusable UI components, responsive layouts, and interac
 2. ```bash
    pnpm install
    ```
-3. ````bash
+3. ```bash
 
-   ```pnpm dev
-   ````
+   pnpm dev
+
+   ```
 
 4. Open http://localhost:3000 in your browser.
