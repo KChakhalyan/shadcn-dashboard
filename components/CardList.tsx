@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Card, CardContent, CardFooter, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
+import Link from "next/link";
 
 const popularContent = [
   {
@@ -95,27 +96,29 @@ const CardList = ({ title }: { title: string }) => {
       <h1 className="text-lg font medium mb-6">{title}</h1>
       <div className="flex flex-col gap-2">
         {list.map((item) => (
-          <Card
-            key={item.id}
-            className="flex-row items-center justify-between gap-4 p-4"
-          >
-            <div className="w-12 h-12 bordered-sm relative overflow-hidden">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover rounded-md"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-            <CardContent className="p-0 flex-1">
-              <CardTitle className="text-sm font-medium">
-                {item.title}
-              </CardTitle>
-              <Badge>{item.badge}</Badge>
-            </CardContent>
-            <CardFooter>{item.count / 1000}K</CardFooter>
-          </Card>
+          <Link href={`/users/${item.id}`} key={item.id}>
+            <Card
+              key={item.id}
+              className="flex-row items-center justify-between gap-4 p-4"
+            >
+              <div className="w-12 h-12 bordered-sm relative overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover rounded-md"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <CardContent className="p-0 flex-1">
+                <CardTitle className="text-sm font-medium">
+                  {item.title}
+                </CardTitle>
+                <Badge>{item.badge}</Badge>
+              </CardContent>
+              <CardFooter>{item.count / 1000}K</CardFooter>
+            </Card>
+          </Link>
         ))}
       </div>
     </div>
