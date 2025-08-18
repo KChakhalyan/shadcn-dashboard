@@ -42,7 +42,7 @@ const chartConfig = {
 
 export default function ChartBarMultiple() {
   return (
-    <Card className="border-none p-0 m-auto">
+    <Card className="border-none m-auto">
       <CardHeader>
         <CardTitle>Bar Chart - Multiple</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
