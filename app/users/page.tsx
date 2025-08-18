@@ -1,4 +1,3 @@
-import z from "zod";
 import { User, columns } from "./Columns";
 import { DataTable } from "./DataTable";
 
