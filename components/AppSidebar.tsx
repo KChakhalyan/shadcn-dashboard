@@ -5,11 +5,9 @@ import {
   Inbox,
   PersonStanding,
   Plus,
-  PlusCircle,
   Projector,
   Search,
   Settings,
-  User,
   UserPlus,
 } from "lucide-react";
 import {
@@ -22,7 +20,6 @@ import {
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuAction,
   SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,

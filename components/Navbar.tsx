@@ -3,9 +3,7 @@ import {
   BadgeCheck,
   CreditCard,
   LogOut,
-  Moon,
   Settings,
-  SquareMenu,
   User,
   Users,
 } from "lucide-react";

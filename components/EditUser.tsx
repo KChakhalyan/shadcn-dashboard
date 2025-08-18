@@ -53,11 +53,11 @@ const EditUser = () => {
       role: "Admin",
     },
   });
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
+  // function onSubmit(values: z.infer<typeof formSchema>) {
+  //   // Do something with the form values.
+  //   // ✅ This will be type-safe and validated.
+  //   console.log(values);
+  // }
   return (
     <SheetContent>
       <SheetHeader>
@@ -132,7 +132,7 @@ const EditUser = () => {
               <FormField
                 control={form.control}
                 name="role"
-                render={({ field }) => (
+                render={() => (
                   <FormItem>
                     <FormLabel>Role</FormLabel>
                     <FormControl>
